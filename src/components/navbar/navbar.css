@@ -28,7 +28,29 @@
 }
 
 .resume {
-    height: 40%;
+    color: #B9848C;
+    background-color: transparent;
+    border: 1px solid #B9848C;;
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    font-family: var(--font-mono);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-left: 15px;
+    font-size: var(--fz-xs);
+}
+
+.resume:hover{
+    background-color: #B9848C;
+    opacity: inherit
+    
+}
+
+.resumeText{
+    text-decoration: none;
+    color: white;
 }
 
 .section {
@@ -40,3 +62,4 @@
 .section:hover {
     color: #B9848C;
 }
+
