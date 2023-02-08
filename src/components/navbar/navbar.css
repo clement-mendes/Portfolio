@@ -1,18 +1,12 @@
 .navbar {
-
     min-height: 100px;
     display: flex;
     justify-content: space-between;
-    align-items: start;
     flex-direction: column;
     background-color: #00457E;
-    position: fixed;
-    top: 0; 
-    left: 0; 
-    z-index: 9999; 
     width: 10%; 
     height: 100%;
-
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.7);
 }
 
 .logo {
