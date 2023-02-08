@@ -1,0 +1,8 @@
+.assistant{
+    height: 100%;
+    width: 100%;
+    min-height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

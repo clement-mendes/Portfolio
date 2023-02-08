@@ -1,65 +1,57 @@
 .navbar {
-    height: 6vh;
-    width: 100vw;
 
+    min-height: 100px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: start;
+    flex-direction: column;
+    background-color: #00457E;
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    z-index: 9999; 
+    width: 10%; 
+    height: 100%;
+
 }
 
 .logo {
-    height: 80%;
-    padding-left: 1vh;
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoAsset {
+    min-height: 30px;
+    height: 40%;
 }
 
 .categories {
     display: flex;
-    height: 100%;
-    width: 30%;
-    padding-right: 1vh;
+    height: 30%;
+    width: 100%;
     justify-content: space-around;
     align-items: center;
+    flex-direction: column;
+    margin-bottom: 5%;
 }
 
-.list {
-    margin-right: 0.3vw;
-    text-decoration: none;
-    color: #B9848C;
+svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
 }
 
-.resume {
-    color: #B9848C;
-    background-color: transparent;
-    border: 1px solid #B9848C;;
-    border-radius: 10px;
-    padding: 0.75rem 1rem;
-    font-family: var(--font-mono);
-    line-height: 1;
-    text-decoration: none;
-    cursor: pointer;
-    transition: var(--transition);
-    margin-left: 15px;
-    font-size: var(--fz-xs);
+svg:hover {
+    fill: #B9848C;
 }
 
-.resume:hover{
-    background-color: #B9848C;
-    opacity: inherit
-    
-}
-
-.resumeText{
-    text-decoration: none;
-    color: white;
-}
-
-.section {
-    text-decoration: none;
-    color: white;
-    opacity: 100%;
-}
-
-.section:hover {
-    color: #B9848C;
-}
-
+ul.no-bullets {
+    list-style-type: none;
+    padding: 0; 
+    margin: 0;
+  }
