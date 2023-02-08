@@ -1,3 +1,4 @@
+import NavBar from "../components/navbar/Navbar";
 import "./home.css"
 
 export default function Home(){
@@ -6,6 +7,6 @@ export default function Home(){
 
 
     return(
-        <div>salut</div>
+        <NavBar />
     );
 }

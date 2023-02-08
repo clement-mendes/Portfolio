@@ -1,0 +1,42 @@
+.navbar {
+    height: 6vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 80%;
+    padding-left: 1vh;
+}
+
+.categories {
+    display: flex;
+    height: 100%;
+    width: 30%;
+    padding-right: 1vh;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.list {
+    margin-right: 0.3vw;
+    text-decoration: none;
+    color: #B9848C;
+}
+
+.resume {
+    height: 40%;
+}
+
+.section {
+    text-decoration: none;
+    color: white;
+    opacity: 100%;
+}
+
+.section:hover {
+    color: #B9848C;
+}
