@@ -85,7 +85,7 @@ export default function Chat() {
                 setIsLoading(true);
                 break;
             case 4:
-                setAnotherRespChoice("I am one of the projects of my creator but not the only one! Let me show you the others!");
+                setAnotherRespChoice("I am one of the projects of my creator but not the only one ! Let me show you the others !");
                 newPropositions.current = propositions;
                 newPropositions.current.splice(item?.id - 1, 1);
                 setIsLoading(true);

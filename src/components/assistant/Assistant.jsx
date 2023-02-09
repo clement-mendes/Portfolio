@@ -1,6 +1,7 @@
 import "./assistant.css"
 import bot from "../../assets/bot.png";
 import Chat from "../chat/Chat";
+import Profile from "../profile/Profile";
 
 
 
@@ -37,7 +38,7 @@ export default function Assistant() {
 
                 </div>
                 <div className="message">
-                    <Chat />
+                    <Profile />
                 </div>
             </div>
         </div>
