@@ -2,9 +2,8 @@ import { useState, useRef, useEffect } from "react";
 import "./chat.css"
 import { Comment } from 'react-loader-spinner'
 
-export default function Chat({choice, setChoice, isLoading, setIsLoading}) {
+export default function Chat({choice, setChoice, isLoading, setIsLoading, botMessage, setBotMessage}) {
 
-    const [botMessage, setBotMessage] = useState("Hello, I am Clément's assistant, I hope you are well. What can I do for you ?")
     const [respchoice, setRespChoice] = useState(null);
     const [anotherchoice, setAnotherChoice] = useState(null);
     const [anotherRespchoice, setAnotherRespChoice] = useState(null);
@@ -84,6 +83,7 @@ export default function Chat({choice, setChoice, isLoading, setIsLoading}) {
         }
     }
 
+    console.log(botMessage);
     return (
 
         <div className="chatBox">

@@ -11,18 +11,53 @@ export default function Assistant() {
 
     const [choice, setChoice] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
-    const [readTime, setReadTime] = useState(false);
+    const [display, setDisplay] = useState(false);
+    const [botMessage, setBotMessage] = useState("Hello, I am Clément's assistant, I hope you are well. What can I do for you ?");
 
     useEffect(() => {
-        setTimeout(() => {
+        const timer = setTimeout(async () => {
             setIsLoading(false)
         }, 3000)
-        if (choice?.id !== 3) {
-            setTimeout(() => {
-                setReadTime(true)
-            }, 6000)
-        }
+        return () => clearTimeout(timer);
     }, [isLoading]);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            if (choice?.id !== 3) {
+                setDisplay(true);
+            }
+        }, 3100)
+
+        return () => clearTimeout(timer);
+    }, [isLoading]);
+
+
+    function renderChoice(id) {
+        switch (id) {
+            case 1:
+                return (
+                    (!display ?
+                        <Chat setChoice={setChoice} choice={choice} isLoading={isLoading} setIsLoading={setIsLoading} botMessage={botMessage} setBotMessage={setBotMessage} />
+                        :
+                        <Profile setChoice={setChoice} choice={choice} display={display} setDisplay={setDisplay} botMessage={botMessage} setBotMessage={setBotMessage} />
+                    )
+                );
+            case 2:
+                return (
+                    !display ?
+                        <Chat setChoice={setChoice} choice={choice} isLoading={isLoading} setIsLoading={setIsLoading} botMessage={botMessage} setBotMessage={setBotMessage} />
+                        :
+                        <Experiences setChoice={setChoice} choice={choice} display={display} setDisplay={setDisplay} />
+                )
+            case 3:
+                return <Chat setChoice={setChoice} choice={choice} isLoading={isLoading} setIsLoading={setIsLoading} botMessage={botMessage} setBotMessage={setBotMessage} />;
+            case 4:
+                return <Profile setChoice={setChoice} choice={choice} />;
+            default:
+                return <Chat setChoice={setChoice} choice={choice} isLoading={isLoading} setIsLoading={setIsLoading} botMessage={botMessage} setBotMessage={setBotMessage} />;
+        }
+
+    }
 
     return (
         <div className="assistant">
@@ -53,12 +88,7 @@ export default function Assistant() {
 
                 </div>
                 <div className="message">
-                    {/* {(choice?.id === 1 && readTime === true) ?
-                        <Profile readTime={readTime} setReadTime={setReadTime}/>
-                        :
-                        <Chat setChoice={setChoice} choice={choice} isLoading={isLoading} setIsLoading={setIsLoading}  />
-                    } */}
-                    <Experiences />
+                    {renderChoice(choice?.id)}
                 </div>
             </div>
         </div>

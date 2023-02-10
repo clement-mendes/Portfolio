@@ -1,6 +1,6 @@
 import "./card.css"
 import metro from "../../../assets/metro.png"
-import dog from "../../../assets/dog.png"
+import chariot from "../../../assets/chariot.png"
 
 
 export default function CardMetro() {
@@ -14,7 +14,7 @@ export default function CardMetro() {
             </div>
             <div className="descriptionJob">
                 <div className="jobImage">
-                    <img src={dog} alt="dog" className="dogImage" />
+                    <img src={chariot} alt="dog" className="dogImage" />
                 </div>
                 <div className="jobTitle">
                     <p>receiver</p>

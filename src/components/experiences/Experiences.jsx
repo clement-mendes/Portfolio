@@ -9,7 +9,7 @@ import CardMetro from "./Cards/cardMetro";
 import CardIkea from "./Cards/CardIkea";
 import CardLidl from "./Cards/cardLidl";
 
-export default function Experiences() {
+export default function Experiences({choice, setChoice, display, setDisplay}) {
 
     const [goToSlide, setGoToSLide] = useState(0);
     const slides = [
@@ -37,8 +37,14 @@ export default function Experiences() {
         return { ...slide, onClick: () => setGoToSLide(index) };
     });
 
+    function handleClick() {
+        setChoice(null);
+        setDisplay(null);
+    }
+
     return (
         <div className="experiences">
+            <p className="close" onClick={handleClick}>x</p>
             <div className="cardBox">
                 <Carousel
                     slides={slides}

@@ -1,9 +1,12 @@
 import "./profile.css"
 
-export default function Profile({readTime, setReadTime}) {
+export default function Profile({choice, setChoice, display, setDisplay, setBotMessage, botMessage}) {
 
     function handleClick() {
-        setReadTime(false);
+        setChoice(null);
+        setDisplay(false);
+        setBotMessage("Can i do something else for you ?")
+        
     }
 
     return (
