@@ -24,10 +24,6 @@ export default function Assistant() {
         }
     }, [isLoading]);
 
-    useEffect(() => {
-
-    }, [isLoading]);
-
     return (
         <div className="assistant">
             <div className="chat">

@@ -3,7 +3,11 @@ import "./experiences.css"
 import { v4 } from "uuid";
 import { config } from "react-spring";
 import { useState } from "react";
-import Card from "./Card/Card";
+import CardMedor from "./Cards/CardMedor";
+import CardComtazic from "./Cards/CardComtazic";
+import CardMetro from "./Cards/cardMetro";
+import CardIkea from "./Cards/CardIkea";
+import CardLidl from "./Cards/cardLidl";
 
 export default function Experiences() {
 
@@ -11,56 +15,35 @@ export default function Experiences() {
     const slides = [
         {
             key: v4(),
-            content: <Card />
+            content: <CardComtazic />
         },
-        // {
-        //     key: v4(),
-        //     content: <img src="https://picsum.photos/800/801/?random" alt="1" />
-        // },
-        // {
-        //     key: v4(),
-        //     content: <img src="https://picsum.photos/800/802/?random" alt="2" />
-        // },
-        // {
-        //     key: v4(),
-        //     content: <img src="https://picsum.photos/600/803/?random" alt="3" />
-        // },
-        // {
-        //     key: v4(),
-        //     content: <img src="https://picsum.photos/800/500/?random" alt="4" />
-        // },
-        // {
-        //     key: v4(),
-        //     content: <img src="https://picsum.photos/800/804/?random" alt="5" />
-        // },
-        // {
-        //     key: v4(),
-        //     content: <img src="https://picsum.photos/500/800/?random" alt="6" />
-        // },
-        // {
-        //     key: v4(),
-        //     content: <img src="https://picsum.photos/800/600/?random" alt="7" />
-        // },
-        // {
-        //     key: v4(),
-        //     content: <img src="https://picsum.photos/805/800/?random" alt="8" />
-        // },
-        // {
-        //     key: v4(),
-        //     content: <img src="https://picsum.photos/805/800/?random" alt="8" />
-        // }
+        {
+            key: v4(),
+            content: < CardMedor/>
+        },
+        {
+            key: v4(),
+            content: <CardMetro />
+        },
+        {
+            key: v4(),
+            content: <CardLidl />
+        },
+        {
+            key: v4(),
+            content: <CardIkea />
+        },
     ].map((slide, index) => {
         return { ...slide, onClick: () => setGoToSLide(index) };
     });
 
     return (
         <div className="experiences">
-            <div style={{ width: "80%", height: "500px", margin: "0 auto" }}>
+            <div className="cardBox">
                 <Carousel
                     slides={slides}
                     goToSlide={goToSlide}
-                    offsetRadius={8}
-                    showNavigation={true}
+                    offsetRadius={2}
                     animationConfig={config.gentle}
                 />
             </div>

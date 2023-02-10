@@ -1,0 +1,122 @@
+.card {
+    height: 60%;
+    width: 20vw;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+}
+
+.jobLogo {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #B9848C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20%;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.7);
+}
+
+.descriptionJob {
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.7);
+    height: 80%;
+    background-color: #2F70AF;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.jobTitle {
+    color: rgb(255, 255, 255);
+    height: 30%;
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: center;
+
+}
+
+.jobImage {
+    position: absolute;
+    width: 99%;
+    height: 48%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.dogImage {
+    height: 12vh;
+}
+
+.jobTasks {
+    font-size: 0.8vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 40%;
+}
+
+.jobDate {
+    height: 30%;
+    display: flex;
+    align-items: end;
+    justify-content: start;
+}
+
+.post-it {
+    width: 50%;
+    height: 60%;
+    position: relative;
+    background: #ffa;
+    overflow: hidden;
+    border-radius: 0 0 0 30px/45px;
+    box-shadow:
+        inset 0 -30px 30px rgba(0, 0, 0, 0.2),
+        inset 0 10px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Permanent Marker';
+    color: #02315E;
+    font-size: 0.5vw;
+}
+
+.post-it:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 9%;
+    height: 30%;
+    background: #ffa;
+    box-shadow:
+        3px -2px 10px rgba(0, 0, 0, 0.2),
+        inset 15px -15px 15px rgba(0, 0, 0, 0.3);
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    transform: skewX(25deg);
+}
+
+.post-it:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 75%;
+    height: 30%;
+    border-top: 3px solid #130d6b;
+    border-radius: 50%;
+    bottom: 0px;
+    left: 10%;
+}
+
+.ikea{
+    height: 80%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
