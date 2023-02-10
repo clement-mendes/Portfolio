@@ -2,12 +2,31 @@ import "./assistant.css"
 import bot from "../../assets/bot.png";
 import Chat from "../chat/Chat";
 import Profile from "../profile/Profile";
+import Experiences from "../experiences/Experiences";
+import { useState, useEffect, useRef } from "react";
 
 
 
 export default function Assistant() {
 
+    const [choice, setChoice] = useState(null);
+    const [isLoading, setIsLoading] = useState(false);
+    const [readTime, setReadTime] = useState(false);
 
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(false)
+        }, 3000)
+        if (choice?.id !== 3) {
+            setTimeout(() => {
+                setReadTime(true)
+            }, 6000)
+        }
+    }, [isLoading]);
+
+    useEffect(() => {
+
+    }, [isLoading]);
 
     return (
         <div className="assistant">
@@ -33,12 +52,17 @@ export default function Assistant() {
                         </svg>
                     </div>
                     <div className="bot">
-                        <img src={bot} alt="bot" className="botImage"/>
+                        <img src={bot} alt="bot" className="botImage" />
                     </div>
 
                 </div>
                 <div className="message">
-                    <Profile />
+                    {/* {(choice?.id === 1 && readTime === true) ?
+                        <Profile readTime={readTime} setReadTime={setReadTime}/>
+                        :
+                        <Chat setChoice={setChoice} choice={choice} isLoading={isLoading} setIsLoading={setIsLoading}  />
+                    } */}
+                    <Experiences />
                 </div>
             </div>
         </div>

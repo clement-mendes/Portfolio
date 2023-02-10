@@ -1,9 +1,14 @@
 import "./profile.css"
 
-export default function Profile() {
+export default function Profile({readTime, setReadTime}) {
+
+    function handleClick() {
+        setReadTime(false);
+    }
 
     return (
         <div className="profile">
+            <p className="close" onClick={handleClick}>x</p>
             <div className="salutation">
                 <div className="hi">
                     Hi,<br />
@@ -11,16 +16,11 @@ export default function Profile() {
                     web developper
                 </div>
             </div>
-            {/* <div className="containerClientMessageBot">
+            <div className="containerClientMessageBot">
                 <div className="clientMessageBot">
-                    I am a serious and respectful person. I give myself the means to succeed and I always bounce back despite the difficulties !
+                    I am serious and respectful. I give myself the means to succeed and I always bounce back despite the difficulties !
                 </div>
             </div>
-            <div className="containerClientMessageBot2">
-                <div className="clientMessageBot">
-                    If you want a sun in your team take me!
-                </div>
-            </div> */}
             <div className="clementDescription">
                 <div className="descriptionBubble">
                     I am 23 years old, I am currently in my 3rd year at epitech.
@@ -39,7 +39,7 @@ export default function Profile() {
             </div>
             <div className="clementDescription">
                 <div className="descriptionBubble">
-                    <a href="https://eparcours.eu/epitech-pre-msc-msc-201/" target={"_blank"}>If you want more informations about my block release training.</a>
+                    <a href="https://eparcours.eu/epitech-pre-msc-msc-201/" target={"_blank"} className="linkEpitech">If you want more informations about my block release training.</a>
                 </div>
             </div>
 

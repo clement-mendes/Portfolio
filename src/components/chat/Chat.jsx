@@ -2,15 +2,13 @@ import { useState, useRef, useEffect } from "react";
 import "./chat.css"
 import { Comment } from 'react-loader-spinner'
 
-export default function Chat() {
+export default function Chat({choice, setChoice, isLoading, setIsLoading}) {
 
     const [botMessage, setBotMessage] = useState("Hello, I am Clément's assistant, I hope you are well. What can I do for you ?")
-    const [choice, setChoice] = useState(null);
     const [respchoice, setRespChoice] = useState(null);
     const [anotherchoice, setAnotherChoice] = useState(null);
     const [anotherRespchoice, setAnotherRespChoice] = useState(null);
     const newPropositions = useRef(null);
-    const [isLoading, setIsLoading] = useState(false);
 
     let propositions = [
         {
@@ -30,13 +28,6 @@ export default function Chat() {
             description: "I want to see clement's projects",
         }
     ];
-
-
-    useEffect(() => {
-        setTimeout(() => {
-            setIsLoading(false)
-        }, 3000)
-    }, [isLoading]);
 
     function handleClick(item) {
         setChoice(item);

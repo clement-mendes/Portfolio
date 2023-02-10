@@ -17,6 +17,7 @@
     grid-column: 1/2;
     min-width: 50%;
     text-align: start;
+    margin-bottom: 1%;
 }
 
 .hi {
@@ -32,7 +33,7 @@
     border-radius: 10px;
     padding: 1%;
     overflow-y: auto;
-    font-size: xx-large;
+    font-size: 1vw;
 }
 
 .clementDescription {
@@ -45,7 +46,7 @@
     display: flex;
     align-items: center;
     box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.5);
-    margin-left: 1%;
+    margin-left: 2%;
     background-color: #B9848C;
     max-width: 90%;
     max-height: 60%;
@@ -53,33 +54,73 @@
     padding: 1%;
     min-height: 40%;
     overflow-y: auto;
-    font-size: x-large;
+    font-size: 1vw;
 }
 
 .containerClientMessageBot{
     grid-column: 2 / 2;
-    grid-row: 2 / 2;
-}
-
-.containerClientMessageBot2{
-    grid-column: 2 / 2;
-    grid-row: 3 / 3;
+    grid-row: 2/2;
+    text-align: end;
+    display: flex;
+    align-items: end;
+    justify-items: end;
     
 }
 
+
 .clientMessageBot{
-    margin-top: 10%;
+    
     color: white;
     display: flex;
     align-items: center;
     box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.5);
-    margin-left: 1%;
     background-color: #2F70AF;
     max-width: 90%;
-    max-height: 30%;
+    max-height: 60%;
     border-radius: 10px;
     padding: 1%;
     min-height: 40%;
     overflow-y: auto;
-    font-size: x-large;
+    font-size: 1vw;
+    margin-left: 2%;
+}
+
+.linkEpitech{
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.linkEpitech:hover{
+    color: white;
+}
+
+.linkEpitech::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.linkEpitech:hover::before {
+    transform: scaleX(1);
+  }
+
+.close{
+    position: absolute;
+    right: 10%;
+    top: 16%;
+    font-size: 1vw;
+    color: white;
+    cursor: pointer;
+}
+
+.close:hover{
+    color: #B9848C;
 }

@@ -22,6 +22,7 @@
     min-height: 5%;
     padding: 1%;
     overflow-y: auto;
+    font-size: 1vw;
 }
 
 .containerClient{
@@ -49,6 +50,7 @@
     padding: 1%;
     max-height: 40%;
     overflow-y: auto;
+    font-size: 1vw;
 }
 
 .choice {
@@ -64,15 +66,16 @@
     background-color: #2F70AF;
     max-width: 30%;
     border-radius: 10px;
-    min-height: 5%;
+    min-height: 70%;
     padding: 1%;
-    max-height: 40%;
-    overflow-y: auto;
+    max-height: 70%;
+    font-size: 1vw;
 }
 
 .containerChoice{
     width: 100%;
     height: 5%;
+    font-size: 1vw;
 }
 
 .anotherChoice{
@@ -84,11 +87,12 @@
     margin-right: 2% !important;
     margin-top: 2%;
     margin-left: 2%;
-    max-width: 40%;
+    max-width: 60%;
     border-radius: 10px;
     min-height: 5%;
     padding: 1%;
     max-height: 40%;
     overflow-y: auto;
+    font-size: 1vw;
 }
 
