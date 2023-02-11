@@ -23,7 +23,7 @@
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.7);
 }
 
-.projectDescription{
+.projectDescription {
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.7);
     height: 80%;
     background-color: #2F70AF;
@@ -35,19 +35,20 @@
     align-items: center;
 }
 
-.adopte1ircLogo{
+.adopte1ircLogo {
     height: 50%;
+    width: 30%;
 }
 
-.imageOfProject{
-    background-color: azure;
+.imageOfProject {
     width: 60%;
     height: 90%;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.topBarImage{
+.topBarImage {
     background-color: #B9848C;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.7);
     border-top-left-radius: 10px;
@@ -57,8 +58,83 @@
     height: 10%;
     width: 90%;
 }
-/* .backgroundImage{
-    height: 70%;
-    width: 70%;
-} */
 
+.backgroundImage {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #7798ad;
+    height: 80%;
+    width: 90%;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.adopte1IrcComputerImage {
+    height: 100%;
+    margin-top: 1%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 99%;
+
+}
+
+.technologieUsed {
+    width: 40%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titleTechnologieUsed {
+    color: white;
+    background-color: #B9848C;
+    height: 10%;
+    width: 90%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.7);
+    font-size: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.technologieDescription {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #7798ad;
+    height: 80%;
+    width: 90%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.7);
+}
+
+.rotation{
+    margin: 10% auto;
+    text-align: center;
+    animation: move 6s linear infinite;
+}
+
+
+@keyframes move {
+    0% {
+        transform: rotate(0deg) translateX(50px) rotate(-0deg);
+    }
+
+    100% {
+        transform: rotate(360deg) translateX(50px) rotate(-360deg);
+    }
+}

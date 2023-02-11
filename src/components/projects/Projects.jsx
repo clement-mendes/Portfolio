@@ -3,7 +3,7 @@ import Preview from "./preview/Preview";
 import { useState } from "react";
 
 
-export default function Projects({ setChoice, choice, display, setDisplay }) {
+export default function Projects({ setChoice, choice, display, setDisplay, botMessage, setBotMessage }) {
 
     const [showPreview, setShowPreview] = useState(false)
 
@@ -13,18 +13,25 @@ export default function Projects({ setChoice, choice, display, setDisplay }) {
         { id: 3, content: "Adopte1Job" },
     ]
 
+    function handleClick() {
+        setChoice(null);
+        setDisplay(false);
+        setBotMessage("Can i do something else for you ?")
+
+    }
 
     function mouseOn(id) {
         setShowPreview(true);
     }
 
-    function mouseOut(id){
+    function mouseOut(id) {
         setShowPreview(false);
     }
 
     return (
 
         <div className="projects">
+            <p className="close" onClick={handleClick}>x</p>
             <div className="containerList">
                 {projects.map((item, index) =>
                     < div className="projectsList" key={index} onMouseEnter={() => mouseOn(item?.id)} onMouseLeave={() => mouseOut(item?.id)} >
@@ -32,9 +39,9 @@ export default function Projects({ setChoice, choice, display, setDisplay }) {
                     </div>
                 )}
             </div>
-            {!showPreview &&
+            {showPreview &&
                 < div className="previewProject">
-                    <Preview />
+                    <Preview setChoice={setChoice} choice={choice} display={display} setDisplay={setDisplay} botMessage={botMessage} setBotMessage={setBotMessage} />
                 </div>
             }
         </div >
