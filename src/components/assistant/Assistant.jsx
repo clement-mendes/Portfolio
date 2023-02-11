@@ -4,6 +4,7 @@ import Chat from "../chat/Chat";
 import Profile from "../profile/Profile";
 import Experiences from "../experiences/Experiences";
 import { useState, useEffect, useRef } from "react";
+import Projects from "../projects/Projects";
 
 
 
@@ -34,27 +35,28 @@ export default function Assistant() {
 
     function renderChoice(id) {
         switch (id) {
-            case 1:
-                return (
-                    (!display ?
-                        <Chat setChoice={setChoice} choice={choice} isLoading={isLoading} setIsLoading={setIsLoading} botMessage={botMessage} setBotMessage={setBotMessage} />
-                        :
-                        <Profile setChoice={setChoice} choice={choice} display={display} setDisplay={setDisplay} botMessage={botMessage} setBotMessage={setBotMessage} />
-                    )
-                );
-            case 2:
-                return (
-                    !display ?
-                        <Chat setChoice={setChoice} choice={choice} isLoading={isLoading} setIsLoading={setIsLoading} botMessage={botMessage} setBotMessage={setBotMessage} />
-                        :
-                        <Experiences setChoice={setChoice} choice={choice} display={display} setDisplay={setDisplay} />
-                )
-            case 3:
-                return <Chat setChoice={setChoice} choice={choice} isLoading={isLoading} setIsLoading={setIsLoading} botMessage={botMessage} setBotMessage={setBotMessage} />;
-            case 4:
-                return <Profile setChoice={setChoice} choice={choice} />;
+            // case 1:
+            //     return (
+            //         (!display ?
+            //             <Chat setChoice={setChoice} choice={choice} isLoading={isLoading} setIsLoading={setIsLoading} botMessage={botMessage} setBotMessage={setBotMessage} />
+            //             :
+            //             <Profile setChoice={setChoice} choice={choice} display={display} setDisplay={setDisplay} botMessage={botMessage} setBotMessage={setBotMessage} />
+            //         )
+            //     );
+            // case 2:
+            //     return (
+            //         !display ?
+            //             <Chat setChoice={setChoice} choice={choice} isLoading={isLoading} setIsLoading={setIsLoading} botMessage={botMessage} setBotMessage={setBotMessage} />
+            //             :
+            //             <Experiences setChoice={setChoice} choice={choice} display={display} setDisplay={setDisplay} />
+            //     )
+            // case 3:
+            //     return <Chat setChoice={setChoice} choice={choice} isLoading={isLoading} setIsLoading={setIsLoading} botMessage={botMessage} setBotMessage={setBotMessage} />;
+            // case 4:
+            //     return <Profile setChoice={setChoice} choice={choice} display={display} setDisplay={setDisplay} botMessage={botMessage} setBotMessage={setBotMessage} />;
             default:
-                return <Chat setChoice={setChoice} choice={choice} isLoading={isLoading} setIsLoading={setIsLoading} botMessage={botMessage} setBotMessage={setBotMessage} />;
+                // return <Chat setChoice={setChoice} choice={choice} isLoading={isLoading} setIsLoading={setIsLoading} botMessage={botMessage} setBotMessage={setBotMessage} />;
+                return <Projects  setChoice={setChoice} choice={choice} display={display} setDisplay={setDisplay}/>
         }
 
     }

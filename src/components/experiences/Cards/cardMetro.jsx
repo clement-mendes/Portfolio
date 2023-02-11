@@ -20,7 +20,7 @@ export default function CardMetro() {
                     <p>receiver</p>
                 </div>
                 <div className="jobTasks">
-                    <div>Organisation</div> <br />
+                    <div>Organization</div> <br />
                     <div>Speed</div> <br />
                     <div>Quality control</div> <br />
                 </div>
