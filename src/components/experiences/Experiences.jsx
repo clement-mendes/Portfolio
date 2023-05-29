@@ -8,11 +8,16 @@ import CardComtazic from "./Cards/CardComtazic";
 import CardMetro from "./Cards/cardMetro";
 import CardIkea from "./Cards/CardIkea";
 import CardLidl from "./Cards/cardLidl";
+import CardAtos from "./Cards/CardAtos";
 
 export default function Experiences({choice, setChoice, display, setDisplay}) {
 
     const [goToSlide, setGoToSLide] = useState(0);
     const slides = [
+        {
+            key: v4(),
+            content: <CardAtos />
+        },
         {
             key: v4(),
             content: <CardComtazic />

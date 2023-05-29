@@ -28,7 +28,6 @@ export default function Preview({}) {
                         <div className="rotation">
                             <img src={javascript} alt="" style={{ height: "5vh" }} />
                         </div>
-
                     </div>
                 </div>
             </div>
